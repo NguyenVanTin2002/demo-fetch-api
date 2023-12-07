@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    );
+  background-color: rgb(var(--background-start-rgb));
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px; 
+}
+
+table tr:nth-child(even) {
+  background-color: rgb(240, 150, 240);
+}
+
+table tr:nth-child(odd) {
+  background-color: yellow;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+table th {
+  padding: 10px;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border: 1px solid rgb(150, 150, 150);
+}
+
+/* Màu chữ và nền cho tiêu đề bảng */
+table th h1,
+table th h2,
+table th h3,
+table th h4,
+table th h5,
+table th h6 {
+  color: white;
+  background-color: green;  
+}
